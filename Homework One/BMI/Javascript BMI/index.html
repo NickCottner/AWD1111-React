@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>JavaScript BMI Calculator</title>
+	<link rel="stylesheet" href="css/style.css">
+    <script src="/bmi.js"></script>
+</head>
+<body>
+	<h1>Simple JavaScript BMI Calculator</h1>
+	<h2><span>NOTE: (*) Input Fields Are Mandatory!</span></h2>
+	
+	<form method="post" action="#">
+		<label for="height">Height(in):</label>
+		<input type="text" id="height"><span class="spaces">*</span><br><br>
+		
+		<label for="weight">Weight(lbs):</label>
+		<input type="text" id="weight"><span class="spaces">*</span><br><br>
+		
+		<label>&nbsp;</label>
+		<input type="button" id="calculate" value="Calculate BMI">&nbsp;&nbsp;&nbsp;
+
+		<label for="bmi">BMI:</label>
+		<input type="text" id="bmi" disabled><span class="spaces"></span><br><br>
+		
+		<label for="bmiStatus">Status:</label>
+		<input type="text" id="bmiStatus" disabled><span class="spaces"></span><br><br>	
+</body>
+</html>
