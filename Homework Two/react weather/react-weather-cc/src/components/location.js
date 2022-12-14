@@ -1,31 +1,26 @@
-import React from "react";
+import React from 'react'
 
-class Location extends React.Component
-{
-    constructor(props) 
-    {
-        //Calls Parent Constructor
-        super(props)
+class Location extends React.Component {
+	constructor(props){
+		super(props)
+		this.state = {inputValue: ""}
+	}
 
-        this.state = { inputValue : "" }
-    }
+	onFormSubmit = (e) =>{
+		e.preventDefault();
+		this.props.onSearchSubmit(this.state.inputValue)   
+	}
 
-    onFormSubmit = (e) => 
-    {
-        e.preventDefualt()
-        this.props.onSearchSubmit(this.state.inputValue)
-    }
-
-    render()
-    {
-        return(
-            <form className="" onSubmit={this.onFormSubmit} >
-                <input type="text" name="city" placeholder="Enter City Name" 
-                onChange={(e) =>
-                this.setState({inputValue: e.target.value})} />
-            </form>
-        )
-    }
+	render() {
+		return(
+			<form className="" onSubmit={this.onFormSubmit}>
+				<input	type="text" name="city"
+						placeholder="City To Search" 
+						onChange={(e) => 
+							this.setState({inputValue: e.target.value})} />
+			</form>
+		)
+	}
 }
 
-export default Location
+export default Location;
